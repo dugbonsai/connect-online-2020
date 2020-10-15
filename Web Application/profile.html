@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/style.css"/>
+    <title>User Profile Details</title>
+  </head>
+
+  <body onload="lookupProfile()">
+    <script>
+      function lookupProfile() {
+        var urlParams = new URLSearchParams(window.location.search);
+
+        document.forms['profile'].elements['name'].value = urlParams.get('name');
+        document.forms['profile'].elements['email'].value = urlParams.get('email');
+        document.forms['profile'].elements['address'].value = urlParams.get('address');
+        document.forms['profile'].elements['university'].value = urlParams.get('university');
+      }
+
+      function onSubmit() {
+        document.forms['profile'].submit();
+      }
+    </script>
+
+    <div id="outer">
+      <div id="inner">
+        <form action="/updateProfile" method="post" name="profile">
+          <table>
+            <tr>
+              <td align="right">Name: </td>
+              <td align="left"><input name="name" type="text" size="30"/></td>
+            </tr>
+            <tr>
+              <td align="right">Email: </td>
+              <td align="left"><input name="email" type="text" size="30"/></td>
+            </tr>
+            <tr>
+              <td align="right">Address: </td>
+              <td align="left"><input name="address" type="text" size="30"/></td>
+            </tr>
+            <tr>
+              <td align="right">University: </td>
+              <td align="left"><input name="university" type="text" size="30"/></td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center">
+                <button type="button" class="button" onclick="onSubmit()">Update User</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

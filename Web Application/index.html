@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/style.css"/>
+    <title>User Management</title>
+  </head>
+
+  <body>
+    <script>
+      function onLookUpUser() {
+        document.forms['lookup'].submit();
+      }
+    </script>
+
+    <div id="outer">
+      <div id="inner">
+        <form action="/profileLookup" method="post" name="lookup">
+          <table>
+            <tr>
+              <td colspan="2" align="center">
+                <img src="/logo.jpg" width="150" height="150"/>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">User Email: </td>
+              <td align="left">
+                <input name="email" type="text" size="30"/>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center">
+                <button type="button" class="button" onclick="onLookUpUser()">Look Up User</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

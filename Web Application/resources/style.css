@@ -1,0 +1,17 @@
+* {
+  font-family: Arial;
+  font-size: 16px;
+}
+
+.button {
+  font-size: 16px;
+}
+
+#outer {
+  width: 100%;
+  text-align: center;
+}
+
+#inner {
+  display: inline-block;
+}

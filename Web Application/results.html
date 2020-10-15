@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/style.css"/>
+    <title>User Profile Details</title>
+  </head>
+
+  <body>
+    <script>
+      function onDone() {
+        document.forms['done'].submit();
+      }
+    </script>
+
+    <div id="outer">
+      <div id="inner">
+        <form action="/" method="get" name="done">
+          <h1>Profile updated</h1>
+          <button type="button" class="button" onclick="onDone()">Done</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
